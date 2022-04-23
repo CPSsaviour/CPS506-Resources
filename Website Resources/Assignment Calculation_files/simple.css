@@ -1,0 +1,469 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+pre, code, samp {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: 75%;
+  line-height: 100%;
+  background-color: #eee; 
+}  
+sub { vertical-align: sub; font-size: 60%;}
+sup { vertical-align: super; font-size: 60%;}
+em, i { font-style: italic}
+strong, b { font-weight: bold}
+s, strike {text-decoration:line-through}
+u {text-decoration:underline}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '"';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+/* These are some messy DEMO styles. No need to poke around here all that much */
+
+
+/* Base
+------------------------------------------*/
+
+html {
+/*  -webkit-font-smoothing: antialiased;    */
+}
+
+body {
+/*  margin: 62px 0;*/
+  background: #FFF;
+  color: #111;
+  font: normal normal 400 100%/1.5em georgia, verdana, sans-serif;
+}
+body.embeddedPage {
+  background-color: transparent;
+  font-size: 13px;
+}
+body:not(.embeddedPage) {
+  font-size: 16px;
+}
+
+a {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline
+}
+
+.shrink,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+  color: rgb(125, 25, 25);
+}
+
+nav a:link,
+nav a:visited,
+nav a:active {
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+a:hover,
+a:focus,
+.shrink:hover,
+.shrink:focus {
+  text-decoration: underline overline;
+}
+[onclick] {
+  cursor: pointer;
+}
+.schedule {
+    margin-left: 5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+figure img {
+  display: block;
+}
+
+/* Typography
+------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+h1+h1, h1+h2, h2+h2, h2+h3, h3+h3, h3+h4, h4+h4, h4+h5, h5+h5, h5+h6, h6+h6, p+ul, p+ol {
+  margin-top: -0.5em;
+}
+dl, ol, ul {
+  margin-bottom: 0.1em;
+  margin-top: 0.1em;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-left: 1.5em;
+}
+
+li {
+  display: list-item;
+  list-style-position: inside;
+}
+
+th, td {
+    padding: 0 0.1em;
+    vertical-align:middle;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3125em;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+/* Typographic elements */
+
+h1 a:link,
+h1 a:visited,
+h2 a:link,
+h2 a:visited {
+    color: black;
+}
+
+.section-title {
+  margin-top: 1.5em;
+  padding: .4em 0 .55em;
+  border-top: 1px solid rgba(0,0,0,.2);
+  border-bottom: 1px dashed rgba(0,0,0,.2);
+}
+
+
+/* Page
+------------------------------------------*/
+
+#page {
+  margin: 0 auto;
+  width: 93%;
+  max-width: 940px;
+  min-height: 45ex;
+  padding: 1em;
+}
+
+footer {
+  margin-top: 4.2em;
+  border-top: 2px dotted rgba(0,0,0,.1);
+  clear: both;
+  text-align: center;
+}
+footer img {
+    max-height: 45px;
+}
+#masthead h1 {
+  margin: .1em 0;
+}
+
+#masthead h2 {
+/*  font-size: 90%;*/
+}
+
+.github {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px dashed rgba(0,0,0,.2);
+  text-align: center;
+}
+
+nav {
+    margin-left: 2em;
+    margin-right: -2em;
+    border-radius: 5px;
+    padding: 1em 2em 1em 2em;
+    box-shadow: inset 0px 0px 8px 8px rgb(150,150,180);
+    float: right;
+}
+nav li {
+    list-style: none;
+}
+.shrunk > :nth-child(n+1) {
+    display: none;
+}
+.shrunk {
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+body.embeddedPage .grid {
+    margin: 0 !important;
+}
+body.embeddedPage #page {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+body.embeddedPage header,
+body.embeddedPage footer,
+body.embeddedPage nav {
+    display: none !important;
+}
+@media not screen {
+    .screen-only {
+	display: none;
+    }
+}
+@media print {
+    a { text-decoration: none; color: #000; }
+}
+@media not print {
+    .print-only {
+	display: none;
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+
+  .demo-introduction {
+    padding-left: 26%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  #page {
+      padding: 1em 2em 1em 2em;
+      box-shadow: 0px 0px 35px 10px rgb(150,150,180);
+  }
+  nav {
+    margin-right: -1.5em;
+  }
+}
+
+.shrink > :nth-child(n+1) {
+    display: none;
+}
+.shrink {
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.hide .visible {
+    display: none;
+}
+.show .hidden {
+    display: none;
+}
+.hide .hidden {
+    color: rgba(1,0,0,0.3);
+    font-size: 75%;
+}
+.date { color: red; border-right: thin black solid; margin-bottom: 0px;}
+.question { border: thin black solid; margin-bottom: 2px; padding: 4px;}
+.answer { margin-left: 1cm; margin-top: 0px; margin-bottom: .2cm; }
+pre {margin-left: 1cm; padding: 6px;}
+
+
+/* Gallery example
+------------------------------------------*/
+
+.gallery a {
+  display: block;
+  margin-top: .4em;
+  margin-bottom: .4em;
+}
+
+.gallery img {
+  display: block;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0);
+  transition: box-shadow .5s;
+}
+
+.gallery a:hover img,
+.gallery a:focus img {
+  box-shadow: 0 0 0 4px rgba(0,0,0,1);
+}
+
+/* custom gallery gutters */
+
+.gallery {
+  margin: 0 -.4em;
+}
+
+.gallery .unit {
+  padding: 0 .4em;
+}
+
+
+/* Components
+------------------------------------------*/
+
+.box {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1px 1em;
+  background: #fff;
+}
+
+figure + .box {
+  margin-top: -1em;
+}
+
+/* Article layout
+------------------------------------------*/
+
+.news-articles .unit {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.news-articles .unit {
+  border-left: 1px solid rgba(0,0,0,.2);
+}
+
+.news-articles .unit:first-child {
+  border-left: none;
+}
+
+.news-articles figure {
+  margin-top: 0;
+}
+
+input.invalid {
+    background-color: #fdd;
+    border-color: #d44;
+}
+
+input.valid {
+    background-color: #dfd;
+    border-color: #4d4;
+}
+/* Breakpoint examples
+------------------------------------------*/
+
+@media only screen and (max-width:768px) {
+  
+  .gallery .unit {
+    width: 25%;
+  }
+  
+  .in-fourths .unit {
+    width: 50%;
+  }
+  
+  .intro .unit {
+    width: auto;
+    display: block;
+  }
+  
+  #page {
+      padding: 0.5em;
+      width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  /* Test of reflowing some layout for smaller screens */
+
+  .news-articles .unit:nth-child(3) {
+    border-left: none;
+  }
+  
+  .grid .unit {
+    width: auto;
+    display: block;
+  }
+  
+  .gallery .unit {
+    width: 33.33333%;
+    display: inline-block;
+  }
+
+  #page {
+      padding: 0;
+      width: 98%;
+  }
+  a:link,
+  a:visited,
+  a:active {
+      text-decoration: underline overline;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  nav {
+      float: none;
+  }
+}
+
+.modified {
+    font-size: 65%;
+}

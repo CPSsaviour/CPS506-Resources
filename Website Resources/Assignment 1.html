@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://cps506.cs.ryerson.ca/w2022/Assignments/a1.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CPS506 - Comparative Programming Languages - Winter 2022 - Assignments">
+<meta name="keywords" content="Ryerson University Course">
+<!-- don't use a title attribute - makes them preferred, not persistent -->
+<link rel="stylesheet" type="text/css" media="all" href="./Assignment 1_files/simple.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Assignment 1_files/grid.css">
+<script id="twitter-wjs" src="./Assignment 1_files/widgets.js.download"></script><script async="" src="./Assignment 1_files/header.js.download"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="Themes/grid-ie8.css" />
+<![endif]-->
+<!--#config timefmt="%Y.%m.%d %H:%M" -->
+<title>CPS506 - Comparative Programming Languages - Winter 2022 - Assignments</title>
+
+
+
+
+
+
+<script charset="utf-8" src="./Assignment 1_files/button.e878ad6ba18f0bdda53d6861059b0edd.js.download"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+   <div id="page">
+	<header class="intro grid in-sevenths">
+	  <div class="unit">
+<!--             <img src="Themes/kit.jpeg" alt="Kit" /> -->
+	  </div>  
+	  <div class="unit span-five">
+	      <h1 class="centertext"><a href="https://cps506.cs.ryerson.ca/">
+CPS506 - Comparative Programming Languages
+ - Winter 2022
+	      </a></h1>
+<h2 class="centertext">Assignment 1 - Smalltalk
+</h2>
+	  </div>
+	</header>
+	<div class="grid in-sevenths">
+	  <main class="full-unit">
+	    <nav class="unit">
+	      <ul>
+<li><a href="">Frequently Asked Questions</a></li>
+<li><a href="">Course Management Form</a></li>
+<li><a href="">Resources</a></li>
+<li><a href="">Assignments</a></li>
+		<li><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 81px; height: 28px;" title="Twitter Tweet Button" src="./Assignment 1_files/tweet_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html"></iframe></li>
+		<li><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 198px; height: 28px;" title="Twitter Follow Button" src="./Assignment 1_files/follow_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html" data-screen-name="RyersonCPS506"></iframe></li>
+	      </ul>
+	    </nav>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<p>
+  This assignment is a relatively simple program to capture various aspects of programming languages.
+  We will work on versions of the program using 4 different languages.
+  We will start with Smalltalk.
+  You may use any classes that are in the default Pharo9 or Pharo10 image.
+  If you don't yet have Pharo installed, see <a href="Smalltalk Resources.html">the Smalltalk resource page to download it</a>.
+</p>
+<p>
+  The application is a simple orbit calculation <a href="Assignment Calculation.html">described here</a>.
+</p>
+<p>
+  My solution has 15 methods in 2 classes for a total of 66 non-blank lines of code (not counting tests).
+  Because of the Smalltalk environment and the fact that Test-Driven-Design is so natural in Smalltalk, I completed this in about 30 minutes. 
+  In addition to the specifications there, the following Smalltalk-specific parameters will apply:
+</p>
+<ol>
+    <li>
+      To set up your fossil the first time, see the fossil page.
+      Once you open the fossil, you will see that there are directories and frameworks already set up for all 3 assignments.
+    </li>
+    <li>
+      If there is Smalltalk code in the repository that you have not brought into your image (which is true this time, but unless you are running Pharo on 2 different computers, unlikely to happen again), you must initialize <code>git</code> for your repository.
+      Of course, you have to have <code>git</code> installed on your computer.
+      From the main directory (the one with the A1, A2, A3 directories in it):
+    <pre>      rm -rf .git
+      git init
+      git add .project A1
+      git commit -m 'initial setup'</pre>
+  </li>
+
+  <li>
+    Call your main class <code>Orbits</code>.
+  </li>
+  <li>
+    Your <code>Orbits</code> instances must have a <code>from:</code> method that accepts a string which contains the whole mult-line input and returns the result string.
+    Your <code>Orbits</code> class must also have a <code>from:</code> method that creates an instance of itself and returns the result of sending it the string.
+  </li>
+   <li>
+      Note the Smalltak version (the one for this semester) does not do anything with files.
+      The only interface is that described above.
+  </li>
+  <li>
+    Put your ownership information (<a href="">see the assignment page</a>) in a file called <code>A1/Ownership.txt</code>.
+  </li>
+  <li>
+    There are tests in the fossil repository, which you will see when you import the repository into Iceberg.
+    You should run the test (click on the little circle beside the method name) and start building your answer.
+  </li>
+</ol>
+<p>
+  You should do your assignment in the your Fossil <code>CPS506</code> repository in the provided packages using Iceberg.
+  Every time you have completed a part of the assignment, you should commit it to the repository.
+  You shouldn't wait until everything is complete to do this, it's better to check in regularly.
+  You don't have to commit with a particular fossil comment - we'll mark the last commit before the due date - however if you commit with a comment something like "Mark this A1 even though it's late", we will mark that even if it's late. 
+</p>
+<p>
+  Remember to do <code>fossil status</code> and <code>fossil ext</code>  from somewhere within the repository periodically to make sure you're commiting all of your code (should only be necessary if you add a class).
+  Also remember to <strong>not</strong> add binary files or other files that can be generated from the source.
+  You can so a <code>fossil addremove</code> as many times as you want, but you only have to do it once each time there are new files to be included in the repository.
+  In a terminal/command window simply change to the working directory and check-in, for example:
+</p>
+<pre>      cd cps506
+      fossil ci -m "finished code and tests for distance calculation"</pre>
+
+ </main>
+</div>
+<footer class="grid in-sixths">
+  <span class="screen-only">
+    <a class="unit" href="https://validator.w3.org/check?uri=referer"><img src="./Assignment 1_files/valid-xhtml11" alt="Valid XHTML 1.1"></a>
+    <a class="unit" href="https://jigsaw.w3.org/css-validator/check/referer"><img src="./Assignment 1_files/vcss" alt="Valid CSS!"></a>
+  </span>
+  <span class="modified unit">
+    </span>
+  <span class="license" title="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License">
+    <a class="unit" href="http://sarg.ryerson.ca/dmason">Dave Mason</a>
+    <a class="unit" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License" src="./Assignment 1_files/88x31.png"></a>
+  </span>
+  <span class="ryerson unit"><a href="http://ryerson.ca/"><img src="./Assignment 1_files/Ryerson-rgb.png" alt="Ryerson University"></a></span>
+</footer>
+</div>
+
+  
+
+<!--
+-*- Local Variables: 
+-*- coding: utf-8
+-*- mode: HTML
+-*- fill-column: 1000
+-*- End:
+-->
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Assignment 1_files/widget_iframe.bbd13993eb53d3a11ac08f5e8cf9d6a4.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Assignment 1_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

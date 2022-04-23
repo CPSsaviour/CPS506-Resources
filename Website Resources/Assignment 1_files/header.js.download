@@ -1,0 +1,11 @@
+function toggleExpand(node,shrink,expand) {
+    if (node.classList.contains(shrink)) {
+	node.classList.remove(shrink);
+	expand && node.classList.add(expand);
+	node.setAttribute('title','Click to '+shrink);
+    } else {
+	expand && node.classList.remove(expand);
+	node.classList.add(shrink);
+	node.setAttribute('title','Click to '+(expand || 'expand'));
+    }
+}

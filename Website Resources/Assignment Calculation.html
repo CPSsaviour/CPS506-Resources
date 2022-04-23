@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://cps506.cs.ryerson.ca/w2022/Assignments/orbit.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CPS506 - Comparative Programming Languages - Winter 2022 - Assignments">
+<meta name="keywords" content="Ryerson University Course">
+<!-- don't use a title attribute - makes them preferred, not persistent -->
+<link rel="stylesheet" type="text/css" media="all" href="./Assignment Calculation_files/simple.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Assignment Calculation_files/grid.css">
+<script id="twitter-wjs" src="./Assignment Calculation_files/widgets.js.download"></script><script async="" src="./Assignment Calculation_files/header.js.download"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="Themes/grid-ie8.css" />
+<![endif]-->
+<!--#config timefmt="%Y.%m.%d %H:%M" -->
+<title>CPS506 - Comparative Programming Languages - Winter 2022 - Assignments</title>
+
+
+
+
+
+<script charset="utf-8" src="./Assignment Calculation_files/button.e878ad6ba18f0bdda53d6861059b0edd.js.download"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+   <div id="page">
+	<header class="intro grid in-sevenths">
+	  <div class="unit">
+<!--             <img src="Themes/kit.jpeg" alt="Kit" /> -->
+	  </div>  
+	  <div class="unit span-five">
+	      <h1 class="centertext"><a href="https://cps506.cs.ryerson.ca/">
+CPS506 - Comparative Programming Languages
+ - Winter 2022
+	      </a></h1>
+<h2 class="centertext">Orbit Calculation
+</h2>
+	  </div>
+	</header>
+	<div class="grid in-sevenths">
+	  <main class="full-unit">
+	    <nav class="unit">
+	      <ul>
+<li><a href="https://cps506.cs.ryerson.ca/w2022/faq.cgi">Frequently Asked Questions</a></li>
+<li><a href="https://cps506.cs.ryerson.ca/w2022/cmf.html">Course Management Form</a></li>
+<li><a href="https://cps506.cs.ryerson.ca/Resources/">Resources</a></li>
+<li><a href="https://cps506.cs.ryerson.ca/w2022/Assignments/">Assignments</a></li>
+		<li><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 81px; height: 28px;" title="Twitter Tweet Button" src="./Assignment Calculation_files/tweet_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html"></iframe></li>
+		<li><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 198px; height: 28px;" title="Twitter Follow Button" src="./Assignment Calculation_files/follow_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html" data-screen-name="RyersonCPS506"></iframe></li>
+	      </ul>
+	    </nav>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<style>
+.optional {background: #ffd}
+</style>
+<!-- <p class="optional">
+  The features with this background are optional.
+</p> -->
+<p>
+  The application is a simple orbit calculation program.
+  The following parameters will apply:
+  </p>
+<ul>
+  <li>
+    The input describes a set of orbiting bodies followed by some queries.
+    A complete sample is in the file <code>sample-input</code> in the top-level folder of your working directory.
+    It looks like:
+    <pre>Sun 57909227 Mercury
+Earth 384400 Moon
+Sun 149598262 Earth
+Moon 1757 LROrbiter
+Mars 9376 Phobos
+Mars 23458 Deimos
+Sun 227943824 Mars
+Sun 778340821 Jupiter
+Sun 1426666422 Saturn
+Sun 2870658186 Uranus
+Sun 4498396441 Neptune
+Sun Moon
+Deimos Moon
+Deimos
+Deimos Phobos
+Moon
+LROrbiter</pre>
+    You should not edit this, although of course you could add similar samples for your own testing purposes.
+  </li>
+  <li>
+    There is also a complete sample output in the file <code>sample-output</code> in the same folder.
+    It contains:
+    <pre>From Sun to Moon is 149982662km
+From Deimos to Moon is 377949944km
+Deimos orbits Mars Sun
+From Deimos to Phobos is 32834km
+Moon orbits Earth Sun
+LROrbiter orbits Moon Earth Sun</pre>
+    You should also not edit this.
+    For assignments 2, 3, and 4, you may want to directly compare the output of your program with this file; instructions are in each assignment.
+  </li>
+  <li>
+    Each line of the input has 1 to 3 words, the meanings of which are:
+    <ol>
+      <li>
+        print a line identifying the objects that the named object orbits
+      </li>
+      <li>
+        print a line showing the distance between the object, where distance is the sum of the orbits.
+        For example in the line <code>Deimos Phobos</code> it is the sum of the distance from Deimos to Mars and the distance from Mars to Phobos.
+        For <code>Deimos Moon</code>, it is the sum of: Deimos to Mars, Mars to Sun, Sun to Earth, Earth to Moon.
+      </li>
+      <li>
+        Establish that the last object orbits the first object at a distance from the second field.
+        For example <code>Earth 384400 Moon</code> means that the Moon orbits the Earth at a distance of 384,400 km.
+      </li>
+    </ol>
+  </li>
+  <li>
+    Except for Smalltalk, the programs will read from standard input and write on standard output.
+  </li>
+  <li>
+    This is sample input.
+    We will test with different input following the same rules.
+    There could be 100s of orbits.
+  </li>
+  <li>
+    In addition to any tests or test data we provide, you must have unit tests for the components of your program, verifying that they perform correctly.
+    This will be worth 20% of the mark.
+  </li>
+</ul>
+ </main>
+</div>
+<footer class="grid in-sixths">
+  <span class="screen-only">
+    <a class="unit" href="https://validator.w3.org/check?uri=referer"><img src="./Assignment Calculation_files/valid-xhtml11" alt="Valid XHTML 1.1"></a>
+    <a class="unit" href="https://jigsaw.w3.org/css-validator/check/referer"><img src="./Assignment Calculation_files/vcss" alt="Valid CSS!"></a>
+  </span>
+  <span class="modified unit">
+    </span>
+  <span class="license" title="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License">
+    <a class="unit" href="http://sarg.ryerson.ca/dmason">Dave Mason</a>
+    <a class="unit" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License" src="./Assignment Calculation_files/88x31.png"></a>
+  </span>
+  <span class="ryerson unit"><a href="http://ryerson.ca/"><img src="./Assignment Calculation_files/Ryerson-rgb.png" alt="Ryerson University"></a></span>
+</footer>
+</div>
+
+  
+
+<!--
+-*- Local Variables: 
+-*- coding: utf-8
+-*- mode: HTML
+-*- fill-column: 1000
+-*- End:
+-->
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Assignment Calculation_files/widget_iframe.bbd13993eb53d3a11ac08f5e8cf9d6a4.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Assignment Calculation_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

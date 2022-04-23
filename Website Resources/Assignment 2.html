@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://cps506.cs.ryerson.ca/w2022/Assignments/a2.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CPS506 - Comparative Programming Languages - Winter 2022 - Assignments">
+<meta name="keywords" content="Ryerson University Course">
+<!-- don't use a title attribute - makes them preferred, not persistent -->
+<link rel="stylesheet" type="text/css" media="all" href="./Assignment 2_files/simple.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Assignment 2_files/grid.css">
+<script id="twitter-wjs" src="./Assignment 2_files/widgets.js.download"></script><script async="" src="./Assignment 2_files/header.js.download"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="Themes/grid-ie8.css" />
+<![endif]-->
+<!--#config timefmt="%Y.%m.%d %H:%M" -->
+<title>CPS506 - Comparative Programming Languages - Winter 2022 - Assignments</title>
+
+
+
+
+
+
+<script charset="utf-8" src="./Assignment 2_files/button.e878ad6ba18f0bdda53d6861059b0edd.js.download"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+   <div id="page">
+	<header class="intro grid in-sevenths">
+	  <div class="unit">
+<!--             <img src="Themes/kit.jpeg" alt="Kit" /> -->
+	  </div>  
+	  <div class="unit span-five">
+	      <h1 class="centertext"><a href="">
+CPS506 - Comparative Programming Languages
+ - Winter 2022
+	      </a></h1>
+<h2 class="centertext">Assignment 2 - Elixir
+</h2>
+	  </div>
+	</header>
+	<div class="grid in-sevenths">
+	  <main class="full-unit">
+	    <nav class="unit">
+	      <ul>
+<li><a href="">Frequently Asked Questions</a></li>
+<li><a href="">Course Management Form</a></li>
+<li><a href="">Resources</a></li>
+<li><a href="">Assignments</a></li>
+		<li><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 81px; height: 28px;" title="Twitter Tweet Button" src="./Assignment 2_files/tweet_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html"></iframe></li>
+		<li><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 198px; height: 28px;" title="Twitter Follow Button" src="./Assignment 2_files/follow_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html" data-screen-name="RyersonCPS506"></iframe></li>
+	      </ul>
+	    </nav>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<p>
+  This assignment is a relatively simple program to capture various aspects of programming languages.
+  We will work on versions of the program using 4 different languages.
+  Next we will use Elixir.
+  You may use any modules that are in the default Elixir library.
+</p>
+<p>
+  The application is a simple Orbits calculation, <a href="Assignment Calculation.html">described here</a>.
+</p>
+<p>
+  My solution is 12 functions (inluding <code>main</code>) totaling 91 non-blank lines of code.
+  Because I thought I understood the problem well and had my working Smalltalk code to refer to for the algorithm, and therefore didn't initially build unit tests, this took me a lot longer.
+  I wrote the initial complete structure in about an hour, but found the problems I uncovered to be very hard to characterize, and probably spent another hour or two (interrupted by meetings) making relatively little progress.
+  Only after I started writing unit tests did I start to move at a reasonable speed, and probably finished in another hour.
+</p>
+<p>
+  In addition to the specifications there, the following Elixir-specific parameters will apply:
+</p>
+<ol>
+  <li>
+    If you didn't already do it for Assignment 1, to set up your fossil, see <a href="">the fossil page</a>.
+    Once you open the fossil, you will see that there are directories and frameworks already set up for all 3 assignments.
+  </li>
+  <li>
+    <pre>cd A2</pre>
+  </li>
+  <li>
+    You would normally do <code>mix new a2</code> to create your package, but this has already been done in your fossil.
+  </li>
+  <li>
+    Your <code>A2</code> module must have a <code>process/1</code> function that accepts a string of an input file.
+    A skeleton of this is already provided, along with a <code>main</code>.
+  </li>
+  <li>
+    When run via <code>iex -S mix</code>, the above methods would return results.
+  </li>
+  <!-- <li>
+    You also have to describe the application in your <code>mix.exs</code> file as described in <a href="http://stackoverflow.com/questions/30687781/how-to-run-elixir-application">this StackOverflow question</a>.
+    The magic return value is to designate a "scheduler".
+    You can see more information (if you care) at <a href="http://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html">the getting started page for applications</a>
+  </li> -->
+  <li>
+    Put your ownership information (<a href="">see the assignment page</a>) in the <code>Assign2/README.md</code> file.
+  </li>
+  <li>
+    Your code will be tested via <strong>both</strong> <code>iex -S mix</code>  and <code>mix run</code>.
+  </li>
+  <li>
+    You should be able to run tests with:
+    <pre>mix test</pre>
+    and it should at least run the provided test.
+  </li>
+  <li>
+    The marker should be able to run your program by entering the following code:
+    <pre>$ iex -S mix
+Interactive Elixir (1.13.2) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)&gt; A2.main()
+Sun 42 Earth
+Earth
+Sun
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>end-of-file entered here ^D on Linux/MacOSX</em>
+Earth orbits Sun
+Sun orbits
+:ok
+iex(2)&gt; 
+</pre>
+    Note that the <code>format</code> function returns a string; it does no I/O.
+    Piping it to <code>IO.write</code> formats it with the newline character interpreted appropriately.
+  </li>
+  <li>
+    The <a href="https://github.com/christopheradams/elixir_style_guide">Elixir style guide</a> is a good source of guidance on code structuring.
+  </li>
+  <li>
+    Run your program with:
+    <pre>mix run -e 'A2.main()' &lt;../sample-input</pre>
+  </li>
+  <li>
+    To check for correctness for this input, run your program with (on Linux or MacOSX):
+    <pre>mix run -e 'A2.main()' &lt;../sample-input | diff - ../sample-output</pre>
+  </li>
+</ol>
+<p>
+  You should do your assignment in the your Fossil <code>CPS506</code> repository in the <code>A2</code> directory.
+  Every time you have completed a part of the assignment, you should commit it to the repository.
+  You shouldn't wait until everything is complete to do this, it's better to commit regularly.
+  You don't have to commit with a particular fossil comment - we'll mark the last commit before the due date - however if you commit with a comment something like "Mark this A2 even though it's late", we will mark that even if it's late. 
+</p>
+<p>
+  Remember to do <code>fossil status</code> and <code>fossil ext</code>  from somewhere within the repository periodically to make sure you're commiting all of your code.
+  Also remember to <strong>not</strong> add binary files or other files that can be generated from the source.
+  You can use <code>fossil add</code> and <code>fossil rm</code> as many times as you want, but you only have to do it once each time there are new files to be included in the repository.
+  (There is also a <code>fossil addremove</code> command, but there is something unintuitive about it so I rarely use it.)
+  In a terminal/command window simply change to the working directory and check-in, for example:
+</p>
+<pre>  cd
+  cd cps506
+  fossil ci -m "finished code and tests for Orbits"
+</pre>
+
+ </main>
+</div>
+<footer class="grid in-sixths">
+  <span class="screen-only">
+    <a class="unit" href="https://validator.w3.org/check?uri=referer"><img src="./Assignment 2_files/valid-xhtml11" alt="Valid XHTML 1.1"></a>
+    <a class="unit" href="https://jigsaw.w3.org/css-validator/check/referer"><img src="./Assignment 2_files/vcss" alt="Valid CSS!"></a>
+  </span>
+  <span class="modified unit">
+    </span>
+  <span class="license" title="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License">
+    <a class="unit" href="http://sarg.ryerson.ca/dmason">Dave Mason</a>
+    <a class="unit" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License" src="./Assignment 2_files/88x31.png"></a>
+  </span>
+  <span class="ryerson unit"><a href="http://ryerson.ca/"><img src="./Assignment 2_files/Ryerson-rgb.png" alt="Ryerson University"></a></span>
+</footer>
+</div>
+
+  
+
+<!--
+-*- Local Variables: 
+-*- coding: utf-8
+-*- mode: HTML
+-*- fill-column: 1000
+-*- End:
+-->
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Assignment 2_files/widget_iframe.bbd13993eb53d3a11ac08f5e8cf9d6a4.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Assignment 2_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

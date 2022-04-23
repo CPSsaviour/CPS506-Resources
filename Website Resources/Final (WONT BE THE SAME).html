@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://cps506.cs.ryerson.ca/w2022/Final/finalEnvironment.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CPS506 - Comparative Programming Languages - Winter 2022 - Final">
+<meta name="keywords" content="Ryerson University Course">
+<!-- don't use a title attribute - makes them preferred, not persistent -->
+<link rel="stylesheet" type="text/css" media="all" href="./Final (WONT BE THE SAME)_files/simple.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Final (WONT BE THE SAME)_files/grid.css">
+<script id="twitter-wjs" src="./Final (WONT BE THE SAME)_files/widgets.js.download"></script><script async="" src="./Final (WONT BE THE SAME)_files/header.js.download"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="Themes/grid-ie8.css" />
+<![endif]-->
+<!--#config timefmt="%Y.%m.%d %H:%M" -->
+<title>CPS506 - Comparative Programming Languages - Winter 2022 - Final</title>
+
+
+
+
+<script charset="utf-8" src="./Final (WONT BE THE SAME)_files/button.e878ad6ba18f0bdda53d6861059b0edd.js.download"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+   <div id="page">
+	<header class="intro grid in-sevenths">
+	  <div class="unit">
+<!--             <img src="Themes/kit.jpeg" alt="Kit" /> -->
+	  </div>  
+	  <div class="unit span-five">
+	      <h1 class="centertext"><a href="https://cps506.cs.ryerson.ca/">
+CPS506 - Comparative Programming Languages
+ - Winter 2022
+	      </a></h1>
+<h2 class="centertext">Final
+</h2>
+	  </div>
+	</header>
+	<div class="grid in-sevenths">
+	  <main class="full-unit">
+	    <nav class="unit">
+	      <ul>
+<li><a href="https://cps506.cs.ryerson.ca/w2022/faq.cgi">Frequently Asked Questions</a></li>
+<li><a href="https://cps506.cs.ryerson.ca/w2022/cmf.html">Course Management Form</a></li>
+<li><a href="https://cps506.cs.ryerson.ca/Resources/">Resources</a></li>
+<li><a href="https://cps506.cs.ryerson.ca/w2022/Assignments/">Assignments</a></li>
+		<li><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 81px; height: 28px;" title="Twitter Tweet Button" src="./Final (WONT BE THE SAME)_files/tweet_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html"></iframe></li>
+		<li><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 198px; height: 28px;" title="Twitter Follow Button" src="./Final (WONT BE THE SAME)_files/follow_button.bbd13993eb53d3a11ac08f5e8cf9d6a4.en.html" data-screen-name="RyersonCPS506"></iframe></li>
+	      </ul>
+	    </nav>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+<p>
+  The following tools will be available:
+</p>
+<ol>
+  <li>Pharo 9 - with an image that will already have test cases defined. Open  it, work on the Smalltalk questions, Save often, Save and Quit when you are done.</li>
+  <li>Elixir - with a pre-loaded test script. Edit, run <code>mix test</code> until all tests pass.</li>
+  <li>Haskell - with a pre-loaded test script. Edit, run <code>cabal test</code> until all tests pass.</li>
+  <li>Rust - with a pre-loaded test script. Edit, run <code>cargo test</code> until all tests pass.</li>
+  <li>Editors (they may not have highlighting for the languages):
+    <ol>
+      <li><code>emacs</code></li>
+      <li><code>vim</code></li>
+      <li><code>vscode</code></li>
+      <li><code>notepad++</code> - on Windows</li>
+  </ol></li>
+  <li>Powershell - on Windows</li>
+  <li>the full Linux shell environment - on Linux</li>
+</ol>
+
+<p>
+  The following documentation resources will be available:
+</p>
+<ol>
+  <li>Both Dave's and Alex's slide decks as PDFs</li>
+  <li>Smalltalk
+    <ol>
+      <li>the interactive Prof Stef tutorial</li>
+      <li><a href="https://learnxinyminutes.com/docs/smalltalk/">Learn Smalltalk in Y minutes</a></li>
+      </ol></li>
+  <li>Elixir
+    <ol>
+     <li><a href="https://learnxinyminutes.com/docs/elixir/">Learn Elixir in Y minutes</a></li>
+     <li><a href="https://media.pragprog.com/titles/elixir/ElixirCheat.pdf">Elixir cheat sheet</a></li>
+      </ol></li>
+  <li>Haskell
+    <ol>
+      <li><a href="https://learnxinyminutes.com/docs/haskell/">Learn Haskell in Y minutes</a></li>
+      <li>The PDF version of <a href="http://www.haskell.org/tutorial/">A Gentle Introduction to Haskell</a></li>
+      <li><a href="https://matela.com.br/haskell-cs.pdf">Haskell Cheat Sheet</a></li>
+      </ol></li>
+  <li>Rust
+    <ol>
+      <li><a href="https://learnxinyminutes.com/docs/rust/">Learn Rust in Y minutes</a></li>
+      <li><a href="https://cheats.rs/">Rust cheat sheet</a> - but not the things linked from it</li>
+      </ol></li>
+  <li>Zig
+    <ol>
+      <li><a href="https://ziglang.org/documentation/0.9.1/">Zig language reference</a></li>
+      </ol></li>
+</ol>
+
+<h2>Sample Questions</h2>
+<h4>Smalltalk/CPS506Exam</h4><pre>sumSquare: aCollection
+	" return the sum of the squares of the elements in the collection "
+        self shouldBeImplemented.</pre>
+<pre>weird: a with: b
+" note that a can be a character collection (String) "
+"      or it can be a collection of any value that understands &gt; and negated "
+" you should test with several kinds of collection and collections of several kinds of values "
+	| temp |
+	temp := a select: [: v | v &gt; b ].
+	^ b isCharacter ifTrue: [ temp capitalized ] ifFalse: [ temp negated ]
+</pre>
+<h4>Smalltalk/CPS506MarkExam</h4>
+You won't change this... it will be test cases that we use to mark your code. (We will actually use different values, but the same basic tests. If your code passes the tests here without hard-coding answers, it will work with our tests.)
+<pre>testSumSquare
+	self assert: (exam sumSquare: #()) equals: 0.
+	self assert: (exam sumSquare: #(1 2 3)) equals: 14.
+	self assert: (exam sumSquare: (-2 to: 3)) equals: 19.</pre>
+<h4>Smalltalk/CPS506TestExam</h4>
+Write a test for #weird:with:
+<h4>Elixir/sq1/lib/sq1.ex</h4><pre>defmodule Sq1 do
+  @moduledoc """
+  Documentation for `Sq1`.
+  """
+
+  @doc """
+  
+  CPS506 Elixir sample question 1
+  
+  isAscending?/1 should return true if the elements of the 
+  input list 'items' are strictly ascending. 
+  Each element must be strictly larger (not merely equal to) 
+  than the element that precedes it. 
+  Return True if the list of items is strictly ascending, 
+  and return False otherwise.
+  Note that the empty list is ascending, as is every
+  list containing only a single element. 
+  
+  """
+  
+  
+  
+end
+</pre>
+<h4>Elixir/sq1/test/sq1_test.exs</h4><pre>defmodule Sq1Test do
+  use ExUnit.Case
+  doctest Sq1
+  
+  test "Testing []" do
+    assert Sq1.isAscending?([]) == true
+  end
+  
+  test "Testing [-5, 10, 99, 123456]" do
+    assert Sq1.isAscending?([-5, 10, 99, 123456]) == true
+  end
+  
+  test "Testing [2, 3, 3, 4, 5]" do
+    assert Sq1.isAscending?([2, 3, 3, 4, 5]) == false
+  end
+
+  test "Testing [-99]" do
+    assert Sq1.isAscending?([-99]) == true
+  end
+  
+  test "Testing [4, 5, 6, 7, 3, 7, 9]" do
+    assert Sq1.isAscending?([4, 5, 6, 7, 3, 7, 9]) == false
+  end
+  
+  test "Testing [1, 1, 1, 1]" do
+    assert Sq1.isAscending?([1, 1, 1, 1]) == false
+  end
+  
+  test "Testing [4, 3, 2, 1]" do
+    assert Sq1.isAscending?([4, 3, 2, 1]) == false
+  end
+  
+  test "Testing [1, 2, 3, 3]" do
+    assert Sq1.isAscending?([1, 2, 3, 3]) == false
+  end
+  
+end
+</pre>
+<h4>Elixir/sq1/test/test_helper.exs</h4><pre>ExUnit.start()
+</pre>
+<h4>Elixir/sq2/lib/sq2.ex</h4><pre>defmodule Sq2 do
+  @moduledoc """
+  Documentation for `Sq2`.
+  """
+
+  @doc """
+  
+  CPS506 Elixir sample question 2
+ 
+  onlyOddDigits?/1 should return true if the provided
+  integer argument contains only odd digits (1, 3, 5, 7, 9)
+  and false otherwise. Note that the digit '0' is 
+  considered even.
+  Hint: The functions rem/2 and div/2 will serve you well
+  
+  """
+  
+  
+end
+</pre>
+<h4>Elixir/sq2/test/sq2_test.exs</h4><pre>defmodule Sq2Test do
+  use ExUnit.Case
+  doctest Sq2
+
+  test "Testing 8" do
+    assert Sq2.onlyOddDigits?(8) == false
+  end
+  
+  test "Testing 1" do
+    assert Sq2.onlyOddDigits?(1) == true
+  end
+  
+  test "Testing 13579753" do
+    assert Sq2.onlyOddDigits?(13579753) == true
+  end
+  
+  test "Testing 42" do
+    assert Sq2.onlyOddDigits?(42) == false
+  end
+  
+  test "Testing 71358" do
+    assert Sq2.onlyOddDigits?(71358) == false
+  end
+  
+  test "Testing 0" do
+    assert Sq2.onlyOddDigits?(0) == false
+  end
+  
+end
+</pre>
+<h4>Elixir/sq2/test/test_helper.exs</h4><pre>ExUnit.start()
+</pre>
+<h4>Haskell/sq1/app/Main.hs</h4><pre>module Main where
+
+import qualified SQ1 (main)
+
+main :: IO ()
+main = SQ1.main
+</pre>
+<h4>Haskell/sq1/src/SQ1.hs</h4><pre>module SQ1 (main, is_cyclops) where
+
+main :: IO ()
+main = do
+    contents &lt;- getLine
+    putStrLn $ show $ is_cyclops (read contents::Int)
+
+{--
+CPS506 Haskell sample question 1
+
+A non-negative integer is a cyclops number if its middle
+digit, and ONLY its middle digit, is '0'.
+If a number does not have a middle digit, i.e. it has
+an even number of digits, it cannot be a cyclops number.
+Hint: Perhaps it's easier to solve this if the integer
+were represented as a String/[Char]...
+-}
+
+</pre>
+<h4>Haskell/sq1/src/TestSuite.hs</h4><pre>module Main where
+    import Test.HUnit
+    import qualified SQ1
+    import qualified System.Exit as Exit
+
+    main = do
+         status &lt;- runTestTT tests
+         if failures status &gt; 0 then Exit.exitFailure else return ()
+- run tests with:
+-     cabal test
+
+- here are some standard tests
+- you should augment them with your own tests for development purposes
+    is_cyclops = SQ1.is_cyclops
+    tests = test [
+      "0" ~: True ~=? is_cyclops 0,
+      "101" ~: True ~=? is_cyclops 101,
+      "98053" ~: True ~=? is_cyclops 98053,
+      "777888999" ~: False ~=? is_cyclops 777888999,
+      "1056" ~: False ~=? is_cyclops 1056,
+      "675409820" ~: False ~=? is_cyclops 675409820
+      ]</pre>
+<h4>Haskell/sq2/app/Main.hs</h4><pre>module Main where
+
+import qualified SQ2 (main)
+
+main :: IO ()
+main = SQ2.main
+</pre>
+<h4>Haskell/sq2/src/SQ2.hs</h4><pre>module SQ2 (main, domino_cycle) where
+
+main :: IO ()
+main = do
+    putStrLn "Hello"
+
+{--
+CPS506 Haskell sample question 2
+
+A domino is represented as a 2-tuple containing two integer
+values, such as (2, 5) or (6, 6).
+Given a list of dominos, determine if the list of dominos
+forms a cycle, so that each domino ends with the same 
+number that the next domino starts with. This property wraps
+around the list. That is, the last domino must end with the 
+same number that the first domino begins with.
+You may assume the list contains at list one domino.
+Return True if the dominos form a cycle, and False otherwise
+Hint: The tuple functions fst and snd will come in handy...
+-}
+
+</pre>
+<h4>Haskell/sq2/src/TestSuite.hs</h4><pre>module Main where
+    import Test.HUnit
+    import qualified SQ2
+    import qualified System.Exit as Exit
+
+    main = do
+         status &lt;- runTestTT tests
+         if failures status &gt; 0 then Exit.exitFailure else return ()
+- run tests with:
+-     cabal test
+
+- here are some standard tests
+- you should augment them with your own tests for development purposes
+    domino_cycle = SQ2.domino_cycle
+    tests = test [
+      "[(3, 5), (5, 2), (2, 3)]" ~: True ~=? domino_cycle [(3, 5), (5, 2), (2, 3)],
+      "[(4, 4)]" ~: True ~=? domino_cycle [(4, 4)],
+      "[(2, 6)]" ~: False ~=? domino_cycle [(2, 6)],
+      "[(5, 2), (2, 3), (4, 5)]" ~: False ~=? domino_cycle [(5, 2), (2, 3), (4, 5)],
+      "[(4, 3), (3, 1)]" ~: False ~=? domino_cycle [(4, 3), (3, 1)]
+      ]</pre>
+<h4>Rust/sq1/src/main.rs</h4><pre>#![allow(non_snake_case,non_camel_case_types,dead_code)]
+
+// This is at the harder end of the Rust questions
+
+// You must not change the types of the functions or the test code,
+// so part of the requirement is to get the types correct
+
+fn pairList1&lt;a,b,c&gt;(f:fn(a)-&gt;b,g:fn(b)-&gt;c,xs:Vec&lt;a&gt;) -&gt; Vec&lt;(b,c)&gt; where a : Copy {
+    // map f and g over the values of the vector in the way that makes the types work
+
+}
+
+fn pairList2&lt;a,b,c&gt;(f:fn(a)-&gt;b,g:fn(a)-&gt;c,xs:Vec&lt;a&gt;) -&gt; Vec&lt;(b,c)&gt; where a : Copy {
+    // map f and g over the values of the vector in the way that makes the types work
+
+}
+
+fn ff(x:i8) -&gt; i32 {
+    // return x plus 1
+
+}
+fn gg(x:i32) -&gt; i64 {
+    // return x times 2
+    
+}
+
+#[cfg(test)]
+#[path = "tests.rs"]
+mod tests;
+</pre>
+<h4>Rust/sq1/src/tests.rs</h4><pre>#[cfg(test)]
+mod tests {
+    // we adjust the path to:
+    use super::super::{*};
+
+    #[test]
+    fn ff_test() {
+        assert_eq!(ff(1),2);
+        assert_eq!(ff(10),11);
+        assert_eq!(ff(-5),-4);
+    }
+
+    #[test]
+    fn gg_test() {
+        assert_eq!(gg(1),2);
+        assert_eq!(gg(10),20);
+        assert_eq!(gg(-5),-10);
+    }
+
+    #[test]
+    fn pairList1_test() {
+        assert_eq!(pairList1(ff,gg,vec![1,2,3]), vec![(2, 4), (3, 6), (4, 8)]);
+        assert_eq!(pairList1(ff,hh,vec![2,3,4,5]), vec![(3, 9), (4, 12), (5, 15), (6,18)]);
+    }
+    fn hh(x:i32) -&gt; i64 {
+        (x*3) as i64
+    }
+    
+    #[test]
+    fn pairList2_test() {
+        assert_eq!(pairList2(ff,ii,vec![1,2,3]), vec![(2, 3), (3, 6), (4, 9)]);
+    }
+    fn ii(x:i8) -&gt; i64 {
+        (x*3) as i64
+    }
+
+}
+</pre>
+<h4>ShortAnswer/q1.txt</h4><pre>Explain some of the important differences between tracing garbage collection and reference counting.
+-
+
+</pre>
+<h4>ShortAnswer/q2.txt</h4><pre>Explain 2 advantages of static typing and 2 advantages of dynamic typing:
+-
+
+</pre>
+
+ </main>
+</div>
+<footer class="grid in-sixths">
+  <span class="screen-only">
+    <a class="unit" href="https://validator.w3.org/check?uri=referer"><img src="./Final (WONT BE THE SAME)_files/valid-xhtml11" alt="Valid XHTML 1.1"></a>
+    <a class="unit" href="https://jigsaw.w3.org/css-validator/check/referer"><img src="./Final (WONT BE THE SAME)_files/vcss" alt="Valid CSS!"></a>
+  </span>
+  <span class="modified unit">
+    </span>
+  <span class="license" title="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License">
+    <a class="unit" href="http://sarg.ryerson.ca/dmason">Dave Mason</a>
+    <a class="unit" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License" src="./Final (WONT BE THE SAME)_files/88x31.png"></a>
+  </span>
+  <span class="ryerson unit"><a href="http://ryerson.ca/"><img src="./Final (WONT BE THE SAME)_files/Ryerson-rgb.png" alt="Ryerson University"></a></span>
+</footer>
+</div>
+
+  
+
+<!--
+-*- Local Variables: 
+-*- coding: utf-8
+-*- mode: HTML
+-*- fill-column: 1000
+-*- End:
+-->
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Final (WONT BE THE SAME)_files/widget_iframe.bbd13993eb53d3a11ac08f5e8cf9d6a4.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Final (WONT BE THE SAME)_files/saved_resource.html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
